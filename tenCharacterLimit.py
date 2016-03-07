@@ -1,6 +1,14 @@
+import os
+
 inFile = open( "input.txt", 'r' )
 
-outFile = open( "output.txt", 'r+' )
+if os.path.isfile ( "output.txt" ):
+
+	outFile = open( "output.txt", 'r+' )
+		
+else:
+
+	outFile = open( "output.txt", 'w' )
 
 originalMessage = inFile.readlines()
 
