@@ -1,16 +1,6 @@
-import os
-
 inFile = open( "input.txt", 'r' ) # opens the input file in read mode
 
-if os.path.isfile ( "output.txt" ): # if output file already exists, opens it in read/write mode,
-# otherwise creates it by opening it in write mode
-
-	outFile = open( "output.txt", 'r+' ) # don't open in 'w' if don't have to because
-	# 'w' is dangerous!	
-		
-else:
-
-	outFile = open( "output.txt", 'w' )
+outFile = open( "output.txt", 'w' )  # opens the output file in write mode- This will also create the file if it does not already exist
 
 originalMessage = inFile.readlines() # creates a list of lines by reading from the input file
 
